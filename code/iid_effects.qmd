@@ -49,11 +49,76 @@ plan(multicore)
 ```{r}
 #| label: read-models
 
-b1_drift <- readRDS("models/iid/b1_drift.rds")
-b2_drift <- readRDS("models/iid/b2_drift.rds")
+#Model 1: drift-face-only
+if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
 
-b1_thresh <- readRDS("models/iid/b1_thresh.rds")
-b2_thresh <- readRDS("models/iid/b2_thresh.rds")
+local_dir  <- here("models", "iid")
+local_file <- file.path(local_dir, "b1_drift_face.rds")
+
+# download if missing
+if (!file.exists(here("models", "iid", "b1_drift_face.rds"))) {
+ dir.create(local_dir, recursive = TRUE, showWarnings = FALSE)
+  osfr::osf_retrieve_node("ku9ce") |>
+    osfr::osf_ls_files(path = "models/IID_models", n_max = Inf) |>
+    dplyr::filter(name == "b1_drift_face.rds") |>
+    osfr::osf_download(path = local_dir, conflicts = "overwrite")
+}
+
+b1_drift <- readRDS("models/iid/b1_drift_face.rds")
+
+#Model 2: drift-face-car
+if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
+
+local_dir  <- here("models", "iid")
+local_file <- file.path(local_dir, "b2_drift_car.rds")
+
+# download if missing
+if (!file.exists(here("models", "iid", "b2_drift_car.rds"))) {
+ dir.create(local_dir, recursive = TRUE, showWarnings = FALSE)
+  osfr::osf_retrieve_node("ku9ce") |>
+    osfr::osf_ls_files(path = "models/IID_models", n_max = Inf) |>
+    dplyr::filter(name == "b2_drift_car.rds") |>
+    osfr::osf_download(path = local_dir, conflicts = "overwrite")
+}
+
+b2_drift <- readRDS("models/iid/b2_drift_car.rds")
+
+
+#Model 3: thresh-face-only
+if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
+
+local_dir  <- here("models", "iid")
+local_file <- file.path(local_dir, "b1_thresh_face.rds")
+
+# download if missing
+if (!file.exists(here("models", "iid", "b1_thresh_face.rds"))) {
+ dir.create(local_dir, recursive = TRUE, showWarnings = FALSE)
+  osfr::osf_retrieve_node("ku9ce") |>
+    osfr::osf_ls_files(path = "models/IID_models", n_max = Inf) |>
+    dplyr::filter(name == "b1_thresh_face.rds") |>
+    osfr::osf_download(path = local_dir, conflicts = "overwrite")
+}
+
+b1_thresh <- readRDS("models/iid/b1_thresh_face.rds")
+
+
+#Model 4: thresh-face-car
+if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
+
+local_dir  <- here("models", "iid")
+local_file <- file.path(local_dir, "b2_thresh_car.rds")
+
+# download if missing
+if (!file.exists(here("models", "iid", "b2_thresh_car.rds"))) {
+ dir.create(local_dir, recursive = TRUE, showWarnings = FALSE)
+  osfr::osf_retrieve_node("ku9ce") |>
+    osfr::osf_ls_files(path = "models/IID_models", n_max = Inf) |>
+    dplyr::filter(name == "b2_thresh_car.rds") |>
+    osfr::osf_download(path = local_dir, conflicts = "overwrite")
+}
+
+
+b2_thresh <- readRDS("models/iid/b2_thresh_car.rds")
 ```
 
 # 2. drift rate posterior predictions 

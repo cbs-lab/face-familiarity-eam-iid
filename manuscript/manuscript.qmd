@@ -31,7 +31,7 @@ affiliations:
     name: ETH Zürich
     department: Learning and Instruction Laboratory, Department of Humanities, Social and Political Sciences
 abstract: |
-  Face recognition ability varies substantially across the population, yet the cognitive and computational processes that give rise to this variation remain poorly understood. Here, we combined approaches from experimental, differential and mathematical psychology to test how individual differences in face recognition ability relate to latent parameters of the decision-making processes involved in face recognition. Participants (N = 300) completed a face memory task with learned and novel faces, together with measures of face recognition ability (Cambridge Face Memory Test) and general object recognition ability (car recognition). We modelled task performance with an evidence-accumulation model that translates accuracy and response times into latent parameters, including drift rate (the signal-to-noise ratio of the evidence) and threshold (response caution). Higher face recognition ability was associated with greater drift rate discrimination between correct and incorrect response accumulators, for both learned and novel faces and to a similar degree, consistent with expertise effects in other domains. This association remained largely unchanged when accounting for car recognition ability, suggesting that it is at least partly tied to face processing itself. Higher face recognition ability was also associated with greater response caution, which may reflect better calibration to task demands. Although the associations were modest in size, these findings suggest that individual differences in face recognition ability are reflected in distinct computational mechanisms, namely more efficient extraction of information from faces and a more cautious decision policy. This approach enables a more explicit and computational basis for cognitive theories of face recognition to be developed, as well as for testing whether these mechanisms operate similarly across the full spectrum of face recognition abilities.
+  Face recognition ability varies substantially across the population, yet the cognitive and computational processes that give rise to this variation remain poorly understood. Here, we combined approaches from experimental, differential and mathematical psychology to test how individual differences in face recognition ability relate to latent parameters of the decision-making processes involved in face recognition. Participants (N = 300) completed a face memory task with learned and novel faces, together with independent measures of face recognition ability (Cambridge Face Memory Test) and general object recognition ability (car recognition). We modelled task performance with an evidence-accumulation model that translates accuracy and response times into latent parameters, including drift rate (the signal-to-noise ratio of the evidence) and threshold (response caution). Higher face recognition ability was associated with greater drift rate discrimination between correct and incorrect response accumulators in the face memory task, for both learned and novel faces and to a similar degree, consistent with expertise effects in other domains. This association remained largely unchanged when accounting for car recognition ability, suggesting that it is at least partly tied to face processing itself. Higher face recognition ability was also associated with greater response caution, which may reflect better calibration to task demands. Although the associations were modest in size, these findings suggest that individual differences in face recognition ability are reflected in distinct computational mechanisms, namely more efficient extraction of information from faces and a more cautious decision policy. This approach enables a more explicit and computational basis for cognitive theories of face recognition to be developed, as well as for testing whether these mechanisms operate similarly across the full spectrum of face recognition abilities.
 keywords: [face perception, memory, individual difference, familiarity, decision models, evidence accumulation modelling]
 wordcount: true
 date: last-modified
@@ -168,8 +168,7 @@ Attempts to understand differences between individuals has a long history in psy
 Indeed, differential psychology represents a major branch of psychological research that aims to understand individual differences in thought, behaviour and ability [@marshEvolutionaryDifferentialPsychology2013; @lubinskiScientificSocialSignificance2000].
 In the domain of face recognition, there is a growing interest in investigating individual differences across the entire spectrum of face recognition ability, rather than focusing on specific subgroups, such as "super-recognisers" [@whiteNeedImproveWay2022].
 To this end, several assessment tools have been designed to measure different facets of face recognition performance [@duchaineCambridgeFaceMemory2006; @burtonGlasgowFaceMatching2010; @russellSuperrecognizersPeopleExtraordinary2009].
-For example, the Cambridge Face Memory Test [@duchaineCambridgeFaceMemory2006] measures how many previously seen faces individuals can accurately recognise, with performance varying across the general population and being poorer in individuals with developmental prosopagnosia.
-As such, these tools appear to have sufficient validity to represent a marker of an individuals face recognition ability.
+For example, the Cambridge Face Memory Test [CFMT; @duchaineCambridgeFaceMemory2006] measures how many previously seen faces individuals can accurately recognise, with performance varying across the general population and being poorer in individuals with developmental prosopagnosia. Furthermore, the CFMT shows high internal consistency [@bowlesDiagnosingProsopagnosiaEffects2009; @wilmerHumanFaceRecognition2010], measures a single underlying ability across a wide range of performance levels [@choItemResponseTheory2015], and yields reasonably stable scores when the same individuals are retested months or years later [@wilmerHumanFaceRecognition2010; @murrayDiagnosingDevelopmentalProsopagnosia2020]. This suggests it captures a stable ability that is relatively specific to faces. As such, these tools appear to have sufficient validity to represent a marker of an individual’s face recognition ability.
 
 Using these tools as a marker of face recognition ability, past research has estimated the association between the performance on these tests and broader perceptual and cognitive processes [@mccafferyIndividualDifferencesFace2018; @noyesFaceRecognitionAbility2018].
 One line of research has studied the extent to which individual differences in face processing reflect domain-general or more domain-specific variation in perceptual and cognitive abilities [@mccafferyIndividualDifferencesFace2018; @verhallenGeneralSpecificFactors2017].
@@ -197,13 +196,12 @@ As a consequence, one can then study how variation between people in these laten
 
 Approaches from differential psychology have historically run alongside, and largely separate to, research traditions from experimental psychology, which aim to estimate the average effect (aggregated across individuals) of an experimental manipulation [@myers2006experimental].
 For example, we previously used an experimental approach in combination with evidence accumulation modelling to study how familiarity impacts the computational processes that support face recognition [@fournier2026familiarity].
-We found that different types of familiarity (visually familiar faces vs. famous faces) had a similar impact on the computational processes involved in the decision-making process of face recognition.
-Compared to learned faces, novel faces induced a greater accumulation of evidence (drift rate), as well as modest increase in response caution (threshold).
-Although we showed that these results could be replicated in both laboratory and online settings, the work aimed to estimate an average effect across a relatively small number of individuals (N\~30), rather than investigate individual differences.
+Different types of familiarity (visually familiar faces vs. famous faces) had a similar impact on the computational processes involved in the decision-making process of face recognition.
+We found that evidence accumulated more rapidly (drift rate) for novel faces. Further, response caution (threshold) was stronger for novel than learned faces. Although we showed that these results could be replicated in both laboratory and online settings, the work aimed to estimate an average effect across a relatively small number of individuals (N\~30), rather than investigate individual differences.
 As such, @fournier2026familiarity were unable to estimate how variation in face recognition ability between individuals shapes the computational processes that determine how face recognition judgements are made.
 
 In the present study, therefore, we combined approaches from differential, experimental and mathematical psychology to investigate how latent computational parameters in face recognition relate to face recognition ability.
-To do so, we used our prior face memory task [@fournier2026familiarity] to compute key latent parameters, whilst also measuring face recognition ability [@duchaineCambridgeFaceMemory2006] and general object recognition ability [@dennettCambridgeCarMemory2012] We also studied a considerably larger sample of participants (N\~300) than our prior work to enable more robust estimates of between participant individual differences.
+To do so, we used our prior face memory task [@fournier2026familiarity] to compute key latent parameters, whilst also measuring face recognition ability, using the CFMT,  [@duchaineCambridgeFaceMemory2006] and general object recognition ability, using the Cambridge Car Memory Test [CCMT; @dennettCambridgeCarMemory2012]. We also studied a considerably larger sample of participants (N\~300) than our prior work to enable more robust estimates of between participant individual differences.
 Based on this research design, we were then able to estimate individual differences in drift rate and threshold as a function by face familiarity (i.e., novel vs visually familiar faces), as well as the extent to which such associations reflect the operation of domain-specific (face) or domain-general (object) processes.
 In general, and based on past research on the development of expertise [@dutilh2009diffusion; @dutilh2011task; @parker2026evidence; @reinhartz2023mechanisms], we expect drift rate discrimination (the quality of the evidence accumulation) to positively correlate with face recognition ability, but it is less clear how threshold (response caution towards a response) may vary, as it is plausible that better face recognition could result in being more or less cautious.
 
@@ -311,7 +309,7 @@ If participants took longer than 2 seconds to press a response key, the text "To
 
 The method of the CFMT was described in @duchaineCambridgeFaceMemory2006.
 Participants learned 6 Caucasian male faces in three views and had to discriminate them later from distractor faces (no time response limit, three-alternative forced-choice task, @fig-Cambridge a).
-Regarding the CCMT, the method has been described in @dennettCambridgeCarMemory2012 and has a highly similar structure, format and scoring as the CFMT, but uses cars instead of faces as stimuli.
+Regarding the CCMT, the method has been described in @dennettCambridgeCarMemory2012 and has a highly similar structure, format and scoring as the CFMT, but uses cars instead of faces as stimuli. The CCMT shows high internal consistency [@dennettCambridgeCarMemory2012] and has been widely used alongside the CFMT as a measure of object recognition ability, for example in studies of developmental prosopagnosia [@grayEvaluatingObjectRecognition2019; @murrayDiagnosingDevelopmentalProsopagnosia2020] and of the genetic basis of face recognition [@shakeshaftGeneticSpecificityFace2015].
 
 :::: {.place arguments="bottom, scope: \"parent\", float: true"}
 :::{#fig-Cambridge fig-cap = "The two Cambridge Memory Tests"}
@@ -324,20 +322,18 @@ Regarding the CCMT, the method has been described in @dennettCambridgeCarMemory2
 
 The face images used in the faces recognition task consisted of images selected from two different data sets of face images: the Face Research Lab London Set (DeBruine, Lisa; Jones, Benedict (2017): <https://doi.org/10.6084/m9.figshare.5047666.v5>) and the Color FERET Database (<https://www.nist.gov/itl/products-and-services/color-feret-database>).
 Each of these data sets is composed of images of different identities faces taken from different angle points.
-102 identities were selected from the Face Research Lab London Set and 51 from the Color FERET Database.
-For each selected identity, three pictures of the face at three different view points (3/4 left view, frontal view and 3/4 right view) were cropped following the outline of the face.
-
-To ensure that the stimuli that we used are reproducible, we used the webmorphR R Package [@webmorph] to crop the face images.
+102 identities were selected from the Face Research Lab London Set and 51 from the Color FERET Database. Following this selection, we removed 27 identities (21 from the Face Research Lab London Set and 6 from the Color FERET Database) due to the presence of identifiable features (i.e. skin marks, make-up...).
+For each selected identity, three pictures of the face at three different view points (3/4 left view, frontal view and 3/4 right view) were cropped following the outline of the face. To ensure that the stimuli that we used are reproducible, we used the webmorphR R Package [@webmorph] to crop the face images. After the cropping, we removed 5 identities for which the cropping process resulted into "over-cropped" pictures (i.e. cropped nose or cropped eyebrows). In total, the data set of face images used in Experiment 1 contained 726 images: one set of three colour face images and one set of three gray scaled face images for each of the 121 identities. 
 The code used to crop the original pictures can be found on OSF (OSF link).
 
 ## Evidence accumulation modeling
 
-The model and priors specification as well as the model estimation are all identical to the one described in (ref: Fournier et al., in press).
+The model and priors specification as well as the model estimation are all identical to the one described in @fournier2026familiarity.
 The priors specifications are described in Supplementary Materials.
 
 ### Model specification
 
-A hierarchical LBA models was fit to the accuracy and response times of the face recognition task.
+A hierarchical LBA models was fit to the accuracy and response times of the main task.
 The model specifications are outlined in our preregistration (@tbl-model-formula).
 The LBA framework assumes a separate evidence accumulator for each response alternative, with potentially different parameter values.
 Accordingly, one accumulator corresponded to the "Learned" response and the other to the "Novel" response.
@@ -1790,7 +1786,7 @@ We have already outlined how our approach has many strengths that add value to o
 First, the number of trials per cell of the design influences the validity and precision of how model parameters are estimated [@alexandrowiczComparingEightParameter2020; @lercheHowManyTrials2017; @wagenmakersEZdiffusionModelResponse2007].
 Our design (90 trials per condition) followed the minimum recommendations to apply EAM [@lukenParameterIdentifiabilityEvidenceaccumulation2025], and we showed a clear replication of our prior experimental work [@fournier2026familiarity], which is re-assuring.
 Nonetheless, adding more trials per condition (e.g., 200 per condition; @boagExpertGuidePlanning2025) would have increased the robustness of our parameter estimates.
-Second, the associations that we observed were all relatively small (i.e., the highest *r* value was 0.24), which could open one up to sampling variability issues.
+Second, the associations that we observed were all relatively small (i.e., the highest *r* value was 0.24).
 However, the effects, especially for drift rate, were consistent with previous findings on expertise effects, which provides some conceptual confidence that the results can be interpreted inline with prior work [@litchfieldFlashpreviewMovingWindow2017; @thompsonExpertiseFingerprintIdentification2013a; @vandergijpInterpretationRadiologicalImages2014].
 
 # Conclusion
@@ -1801,42 +1797,5 @@ This association was not easily explained by a general perceptual ability, which
 Better recognisers also required more evidence before responding, which may reflect a better calibration to task demands.
 Together, these findings suggest that individual differences in face recognition ability are reflected in distinct computational mechanisms of the decision process.
 Identifying these mechanisms provides a more specific basis for theories of face recognition, and for testing whether they operate similarly across the full spectrum of the face recognition ability.
-
-```{=html}
-<!-- This project combined approaches from experimental, differential and mathematical psychology to investigate individual differences in the computational processes that support face recognition.
-We show that face recognition ability is positively associated with the rate of evidence accumulation (drift rate parameter) for both learned and novel faces, as well as the response caution (threshold parameter) for learned faces.
-Further analyses showed that this pattern of results does not appear to reflect a more general object recognition ability, and thus the observed relationship may be partially specific to processing faces.
-More generally, these findings extend past work on face perception by showing that there is value to be gained by estimating how expertise in face recognition shapes the latent computational processes that support a key dimension of everyday social interactions.
-
-Variation in face recognition ability had a multifaceted impact on parameters in our decision-making model, such that drift rate and threshold were both positively associated with face recognition ability.
-The drift rate results suggest that people who are generally better at recognizing faces accumulates more recognition signal and are more capable to ignore noisy information coming from the stimulus.
-Our findings are, therefore, in accordance with previous research that showed that expertise effects are primarily due to a better information extraction [@litchfieldFlashpreviewMovingWindow2017; @thompsonExpertiseFingerprintIdentification2013a; @vandergijpInterpretationRadiologicalImages2014].
-We extend these findings by showing that these effects are not limited to differences between smaller subgroups of experts and novices at the edge of the face recognition distributions, but they concern variation in the general population as well.
-
-Regarding response caution, previous studies have shown that confidence is itself a decision variable used to regulate future behavior [@flemingNeuralMediatorsChanges2018; @folkeExplicitRepresentationConfidence2016].
-The positive association between threshold and face recognition ability could reflect a better estimation of the task difficulty for people with higher face recognition ability, who voluntary increase their response caution to ensure a better performance given the task demands.
-However, future research is required to confirm this suggestion.
-Overall, our results suggest that not only does high face recognition ability predict a better ability to extract meaningful information for the recognition success but also predict the voluntary strategic decision of the subject to be more cautious.
-
-Moving beyond manifest / observed measures to uncover novel insight into the structure of cognition and expertise in the domain of face perception.
-Most differential studies in face processing have used test scores to estimate different abilities underlying face processing and investigated if these abilities were related to each other or to other predictors of interest [@mccafferyIndividualDifferencesFace2018; @noyesFaceRecognitionAbility2018].
-Here we move this research field into a new direction, which feel has many benefits for understanding the cognitive processes involved in social perception and cognition more generally.
-How the different parameters of the evidence accumulation models are related to underlying psychological constructs is already well established [@evans2019evidence]. One benefit for differential studies is that hypotheses about individual differences in social information processing becomes more specific and explicit (which parameter/psychological construct) and goes beyond performance in term of manifest measures (i.e. accuracy and response times). Another benefit is using a model comparison approach. By comparing the best fitting model across individuals, it becomes possible to assess which participants display a specific effect, as well as as which psychological constructs of the decision-making process best describe different patterns of performance between participants [@alister2024Gaze; @evans2019evidence].
-These benefits could provide meaningful insights regarding how the structure of social cognition varies across individuals.
-
-Although our primary aim was to investigate how face recognition ability predicts computational processes involved in face perception, we conducted exploratory analyses using car recognition ability as a comparison.
-Car recognition ability positively predicted drift rate for novel faces but not for learned faces, and unlike face recognition ability, it did not predict the discrimination between TRUE and FALSE drift rates for learned faces.
-These findings suggest that car and face recognition abilities relate differently to the computational processes underlying face recognition.
-We speculate that this pattern may reflect differences in information processing: object recognition relies primarily on featural processing, whereas face recognition increasingly integrates configural processing as faces become familiar [@cabezaFeaturesAreAlso2000; @madoleRoleObjectParts1995; @schwaningerRoleFeaturalConfigural2002; @tverskyObjectsPartsCategories1984].
-Featural processing alone may support evidence accumulation for novel face recognition while also introducing noise, whereas combining featural and configural processing may enhance meaningful evidence accumulation and reduce detrimental noise.
-Future research should test whether these distinct associations reflect differences in underlying processing mechanisms.
-
-Previous evidence accumulation model development studies have highlighted how the number of trials per cell of the design influences the validity and precision of how model parameters are estimated [@alexandrowiczComparingEightParameter2020; @lercheHowManyTrials2017; @wagenmakersEZdiffusionModelResponse2007].
-Our design (90 trials per condition) and control of error rates in our face recognition task followed the minimum recommendations to apply EAM [@lukenParameterIdentifiabilityEvidenceaccumulation2025].
-Nonetheless, adding more trials per condition (e.g., 200 per condition; @boagExpertGuidePlanning2025) would have increased the robustness of our parameter estimates.
-Overall the effect sizes of the drift rate predictions could be considered small.
-However, these effects are consistent with previous literature findings on expertise effects [@litchfieldFlashpreviewMovingWindow2017; @thompsonExpertiseFingerprintIdentification2013a; @vandergijpInterpretationRadiologicalImages2014], which support our inferences of these effects.
-If our predictions would have shown the opposite of the expected expertise effects (drift rate (TRUE - FALSE) decreasing as face recognition ability increases), then we would have emphasized more caution to interpret our small effect size results. -->
-```
 
 {{< pagebreak >}}

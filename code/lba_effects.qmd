@@ -32,23 +32,24 @@ safe_pal   <- paletteer_d("rcartocolor::Safe", 4)
 myColors_1 <- c("novel" = safe_pal[1], "learned" = safe_pal[2])
 ```
 
-# 1. Load model
+# 1. Load model from OSF or from local folder
 
 ```{r}
 #| label: load-model
 
-# if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
-# 
-# # download if missing
-# if (!file.exists(here("exp_1", "models", "LBA_exp1.rds"))) {
-#   osfr::osf_retrieve_node("65bt2") |>
-#     osfr::osf_ls_files() |>
-#     dplyr::filter(name == "exp_1") |>
-#     osfr::osf_ls_files() |>
-#     osfr::osf_ls_files() |>
-#     dplyr::filter(name == "LBA_exp1.rds") |>
-#     osfr::osf_download(path = here("exp_1", "models"), conflicts = "overwrite")
-# }
+if (Sys.getenv("OSF_PAT") != "") osfr::osf_auth(Sys.getenv("OSF_PAT"))
+
+local_dir  <- here("models", "lba")
+local_file <- file.path(local_dir, "LBA_iid.rds")
+
+# download if missing
+if (!file.exists(here("models", "lba", "LBA_iid.rds"))) {
+ dir.create(local_dir, recursive = TRUE, showWarnings = FALSE)
+  osfr::osf_retrieve_node("ku9ce") |>
+    osfr::osf_ls_files(path = "models/LBA_models", n_max = Inf) |>
+    dplyr::filter(name == "LBA_iid.rds") |>
+    osfr::osf_download(path = local_dir, conflicts = "overwrite")
+}
 
 LBA_iid <- readRDS("models/lba/LBA_iid.rds")
 ```
