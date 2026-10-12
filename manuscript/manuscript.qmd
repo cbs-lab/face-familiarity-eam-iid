@@ -62,7 +62,7 @@ format:
         href: https://github.com/rich-ramsey/
         icon: github
       - text: OSF Repository
-        href: https://osf.io/65bt2
+        href: https://osf.io/ku9ce
         icon: archive
   preprint-typst:
     format: pdf
@@ -211,7 +211,7 @@ In general, and based on past research on the development of expertise [@dutilh2
 
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study [@simonsConstraintsGeneralityCOG2017].
 The research question, hypotheses, experimental design, planned analysis, and exclusion criteria were preregistered (<https://osf.io/b74gt/overview>).
-Raw data and analysis code are available on Github (add link).
+Raw data and analysis code are available on Github (<https://github.com/cbs-lab/face-familiarity-eam-iid>). Models objects can be found on OSF (<https://osf.io/ku9ce/overview>).
 
 ```{r}
 #| label: exclusion-all
@@ -320,11 +320,11 @@ Regarding the CCMT, the method has been described in @dennettCambridgeCarMemory2
 
 ## Stimuli
 
-The face images used in the faces recognition task consisted of images selected from two different data sets of face images: the Face Research Lab London Set (DeBruine, Lisa; Jones, Benedict (2017): <https://doi.org/10.6084/m9.figshare.5047666.v5>) and the Color FERET Database (<https://www.nist.gov/itl/products-and-services/color-feret-database>).
+The face images used in the faces recognition task consisted of images selected from two different data sets of face images: the Face Research Lab London Set [@debruinefacelab2017] and the Color FERET Database (<https://www.nist.gov/itl/products-and-services/color-feret-database>).
 Each of these data sets is composed of images of different identities faces taken from different angle points.
 102 identities were selected from the Face Research Lab London Set and 51 from the Color FERET Database. Following this selection, we removed 27 identities (21 from the Face Research Lab London Set and 6 from the Color FERET Database) due to the presence of identifiable features (i.e. skin marks, make-up...).
 For each selected identity, three pictures of the face at three different view points (3/4 left view, frontal view and 3/4 right view) were cropped following the outline of the face. To ensure that the stimuli that we used are reproducible, we used the webmorphR R Package [@webmorph] to crop the face images. After the cropping, we removed 5 identities for which the cropping process resulted into "over-cropped" pictures (i.e. cropped nose or cropped eyebrows). In total, the data set of face images used in Experiment 1 contained 726 images: one set of three colour face images and one set of three gray scaled face images for each of the 121 identities. 
-The code used to crop the original pictures can be found on OSF (OSF link).
+The code used to crop the original pictures can be found on OSF (<https://osf.io/ku9ce/files/osfstorage>).
 
 ## Evidence accumulation modeling
 
@@ -1316,8 +1316,8 @@ Inspection of the posterior predictions in @tbl-pred-acc shows that some of thes
 ```{r}
 #| label: read-models
 #| include: false
-b1_drift <- readRDS(here("models/b1_drift_face.rds"))
-b2_drift <- readRDS(here("models/b2_drift_car.rds"))
+b1_drift <- readRDS(here("models/iid/b1_drift_face.rds"))
+b2_drift <- readRDS(here("models/iid/b2_drift_car.rds"))
 ```
 
 ```{r}
